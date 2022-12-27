@@ -9,6 +9,9 @@ const body_parser_1 = __importDefault(require("body-parser"));
 const app = (0, express_1.default)();
 const port = 3000;
 const parserMiddleWare = (0, body_parser_1.default)({});
+app.get('/', (req, res) => {
+    res.send('this is video api');
+});
 let videosDB = [
     {
         id: 1,

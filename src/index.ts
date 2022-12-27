@@ -8,6 +8,10 @@ const app = express();
 const port = 3000;
 const parserMiddleWare = bodyParser({});
 
+app.get('/', (req, res) => {
+  res.send('this is video api')
+})
+
 let videosDB: any = [
   {
     id: 1,
