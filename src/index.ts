@@ -1,12 +1,11 @@
 import { Response } from "express";
 import express, { Request } from "express";
 import { Router } from "express";
-import bodyParser from "body-parser";
 
-// const express = require("express");
+
 const app = express();
-const port = 3000;
-const parserMiddleWare = bodyParser({});
+const port = process.env.PORT || 3000
+const parserMiddleWare = express.json()
 
 app.get('/', (req, res) => {
   res.send('this is video api')
